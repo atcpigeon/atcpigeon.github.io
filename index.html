@@ -18,42 +18,80 @@
 
     <section id="approach">
         <h2>My Approach</h2>
-        <p>I implemented a two-stage process: first, a naive alignment method using exhaustive search, and then an optimized pyramid-based alignment for high-resolution images. Below are some example results using both methods.</p>
+        <p>I implemented two methods for alignment: NCC and Euclidean. For TIF images, I used a pyramid-based approach for efficiency, while for JPG images, I used a single-scale approach without a pyramid.</p>
     </section>
 
     <section id="results">
         <h2>Results</h2>
-        <h3>Naive Alignment</h3>
+        <h3>TIF Images (Pyramid)</h3>
         <div class="image-gallery">
-            <img src="images/monastery_naive.jpg" alt="Monastery Naive Alignment">
-            <img src="images/cathedral_naive.jpg" alt="Cathedral Naive Alignment">
+            <h4>Church</h4>
+            <img src="images/church_L2_Pyramid.jpg" alt="Church L2 Pyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Emir</h4>
+            <img src="images/emir_L2_Pyramid.jpg" alt="Emir L2 Pyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Harvesters</h4>
+            <img src="images/harvesters_L2_Pyramid.jpg" alt="Harvesters L2 Pyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Icon</h4>
+            <img src="images/icon_L2_Pyramid.jpg" alt="Icon L2 Pyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Lady</h4>
+            <img src="images/lady_L2_Pyramid.jpg" alt="Lady L2 Pyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Melons</h4>
+            <img src="images/melons_L2_Pyramid.jpg" alt="Melons L2 Pyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Onion Church</h4>
+            <img src="images/onion_church_L2_Pyramid.jpg" alt="Onion Church L2 Pyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Sculpture</h4>
+            <img src="images/sculpture_L2_Pyramid.jpg" alt="Sculpture L2 Pyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Self Portrait</h4>
+            <img src="images/self_portrait_L2_Pyramid.jpg" alt="Self Portrait L2 Pyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Three Generations</h4>
+            <img src="images/three_generations_L2_Pyramid.jpg" alt="Three Generations L2 Pyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Train</h4>
+            <img src="images/train_L2_Pyramid.jpg" alt="Train L2 Pyramid">
         </div>
 
-        <h3>Pyramid Alignment</h3>
+        <h3>JPG Images (Non-Pyramid)</h3>
         <div class="image-gallery">
-            <img src="images/monastery_pyramid.jpg" alt="Monastery Pyramid Alignment">
-            <img src="images/cathedral_pyramid.jpg" alt="Cathedral Pyramid Alignment">
-        </div>
-        
-        <h3>Additional Results</h3>
-        <div class="image-gallery">
-            <img src="images/image1.jpg" alt="Additional Image 1">
-            <img src="images/image2.jpg" alt="Additional Image 2">
+            <h4>Cathedral</h4>
+            <img src="images/cathedral_L2_NoPyramid.jpg" alt="Cathedral L2 NoPyramid">
         </div>
         <div class="image-gallery">
-            <img src="images/image3.jpg" alt="Additional Image 3">
-            <img src="images/image4.jpg" alt="Additional Image 4">
+            <h4>Monastery</h4>
+            <img src="images/monastery_L2_NoPyramid.jpg" alt="Monastery L2 NoPyramid">
+        </div>
+        <div class="image-gallery">
+            <h4>Tobolsk</h4>
+            <img src="images/tobolsk_L2_NoPyramid.jpg" alt="Tobolsk L2 NoPyramid">
         </div>
     </section>
 
     <section id="challenges">
         <h2>Challenges & Solutions</h2>
-        <p>One of the main challenges was aligning high-resolution images efficiently. The pyramid approach significantly reduced the computational cost while maintaining accuracy. I also had to handle different brightness levels between channels, which I addressed using Normalized Cross-Correlation (NCC) as a matching metric.</p>
+        <p>Aligning high-resolution TIF images was computationally intensive, but the pyramid approach significantly reduced the time while maintaining accuracy. For JPG images, the single-scale method was sufficient.</p>
     </section>
 
     <section id="extra">
         <h2>Bells & Whistles</h2>
-        <p>For extra credit, I implemented automatic cropping to remove misaligned borders, automatic contrast adjustment, and explored white balancing techniques to enhance image quality.</p>
+        <p>I implemented additional features such as automatic cropping and contrast adjustment to improve the final image quality.</p>
     </section>
 
     <footer>
