@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS180 Project 1: Colorizing Prokudin-Gorskii Photos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CS180: Prokudin-Gorskii Colorization Project</h1>
+    </header>
+
+    <section id="overview">
+        <h2>Project Overview</h2>
+        <p>This project is part of CS180: Intro to Computer Vision and Computational Photography. The goal is to colorize the Prokudin-Gorskii photo collection by aligning the red, green, and blue channels of each image.</p>
+    </section>
+
+    <section id="approach">
+        <h2>My Approach</h2>
+        <p>I implemented a two-stage process: first, a naive alignment method using exhaustive search, and then an optimized pyramid-based alignment for high-resolution images. Below are some example results using both methods.</p>
+    </section>
+
+    <section id="results">
+        <h2>Results</h2>
+        <h3>Naive Alignment</h3>
+        <div class="image-gallery">
+            <img src="images/monastery_naive.jpg" alt="Monastery Naive Alignment">
+            <img src="images/cathedral_naive.jpg" alt="Cathedral Naive Alignment">
+        </div>
+
+        <h3>Pyramid Alignment</h3>
+        <div class="image-gallery">
+            <img src="images/monastery_pyramid.jpg" alt="Monastery Pyramid Alignment">
+            <img src="images/cathedral_pyramid.jpg" alt="Cathedral Pyramid Alignment">
+        </div>
+        
+        <h3>Additional Results</h3>
+        <div class="image-gallery">
+            <img src="images/image1.jpg" alt="Additional Image 1">
+            <img src="images/image2.jpg" alt="Additional Image 2">
+        </div>
+        <div class="image-gallery">
+            <img src="images/image3.jpg" alt="Additional Image 3">
+            <img src="images/image4.jpg" alt="Additional Image 4">
+        </div>
+    </section>
+
+    <section id="challenges">
+        <h2>Challenges & Solutions</h2>
+        <p>One of the main challenges was aligning high-resolution images efficiently. The pyramid approach significantly reduced the computational cost while maintaining accuracy. I also had to handle different brightness levels between channels, which I addressed using Normalized Cross-Correlation (NCC) as a matching metric.</p>
+    </section>
+
+    <section id="extra">
+        <h2>Bells & Whistles</h2>
+        <p>For extra credit, I implemented automatic cropping to remove misaligned borders, automatic contrast adjustment, and explored white balancing techniques to enhance image quality.</p>
+    </section>
+
+    <footer>
+        <p>Project by [Your Name]</p>
+    </footer>
+</body>
+</html>
