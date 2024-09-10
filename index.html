@@ -18,84 +18,169 @@
 
     <section id="approach">
         <h2>My Approach</h2>
-        <p>I implemented two methods for alignment: NCC and Euclidean. For TIF images, I used a pyramid-based approach for efficiency, while for JPG images, I used a single-scale approach without a pyramid.</p>
+        <p>For the alignment of TIF images, only the Normalized Cross-Correlation (NCC) algorithm was used, with a pyramid structure to optimize computational efficiency. For the alignment of JPG images, both the Normalized Cross-Correlation (NCC) and Euclidean distance methods were employed as a comparison, without the use of a pyramid structure, but rather using a single-scale approach.</p>
     </section>
 
     <section id="results">
         <h2>Results</h2>
-        <h3>TIF Images (Pyramid)</h3>
-        <div class="image-gallery">
-            <h4>Church</h4>
-            <img src="images/church_L2_Pyramid.jpg" alt="Church L2 Pyramid">
+        -Pyramid vs NCC)</h3>
+<div class="image-comparison">
+    <div class="image-gallery">
+        <h4>Cathedral</h4>
+        <div class="image-row">
+            <div class="image-col">
+                <h5>L2</h5>
+                <img src="images/cathedral_L2_NoPyramid.jpg" alt="Cathedral L2 NoPyramid">
+                <p>g_shift: (1, -1), r_shift: (7, -1)</p>
+            </div>
+            <div class="image-col">
+                <h5>NCC</h5>
+                <img src="images/cathedral_NCC_NoPyramid.jpg" alt="Cathedral NCC NoPyramid">
+                <p>g_shift: (1, -1), r_shift: (7, -1)</p>
+            </div>
         </div>
-        <div class="image-gallery">
-            <h4>Emir</h4>
-            <img src="images/emir_L2_Pyramid.jpg" alt="Emir L2 Pyramid">
+    </div>
+    <div class="image-gallery">
+        <h4>Monastery</h4>
+        <div class="image-row">
+            <div class="image-col">
+                <h5>L2</h5>
+                <img src="images/monastery_L2_NoPyramid.jpg" alt="Monastery L2 NoPyramid">
+                <p>g_shift: (-6, 0), r_shift: (9, 1)</p>
+            </div>
+            <div class="image-col">
+                <h5>NCC</h5>
+                <img src="images/monastery_NCC_NoPyramid.jpg" alt="Monastery NCC NoPyramid">
+                <p>g_shift: (-6, 0), r_shift: (9, 1)</p>
+            </div>
         </div>
-        <div class="image-gallery">
-            <h4>Harvesters</h4>
-            <img src="images/harvesters_L2_Pyramid.jpg" alt="Harvesters L2 Pyramid">
+    </div>
+    <div class="image-gallery">
+        <h4>Tobolsk</h4>
+        <div class="image-row">
+            <div class="image-col">
+                <h5>L2</h5>
+                <img src="images/tobolsk_L2_NoPyramid.jpg" alt="Tobolsk L2 NoPyramid">
+                <p>g_shift: (3, 2), r_shift: (6, 3)</p>
+            </div>
+            <div class="image-col">
+                <h5>NCC</h5>
+                <img src="images/tobolsk_NCC_NoPyramid.jpg" alt="Tobolsk NCC NoPyramid">
+                <p>g_shift: (3, 2), r_shift: (6, 3)</p>
+            </div>
         </div>
-        <div class="image-gallery">
-            <h4>Icon</h4>
-            <img src="images/icon_L2_Pyramid.jpg" alt="Icon L2 Pyramid">
-        </div>
-        <div class="image-gallery">
-            <h4>Lady</h4>
-            <img src="images/lady_L2_Pyramid.jpg" alt="Lady L2 Pyramid">
-        </div>
-        <div class="image-gallery">
-            <h4>Melons</h4>
-            <img src="images/melons_L2_Pyramid.jpg" alt="Melons L2 Pyramid">
-        </div>
-        <div class="image-gallery">
-            <h4>Onion Church</h4>
-            <img src="images/onion_church_L2_Pyramid.jpg" alt="Onion Church L2 Pyramid">
-        </div>
-        <div class="image-gallery">
-            <h4>Sculpture</h4>
-            <img src="images/sculpture_L2_Pyramid.jpg" alt="Sculpture L2 Pyramid">
-        </div>
-        <div class="image-gallery">
-            <h4>Self Portrait</h4>
-            <img src="images/self_portrait_L2_Pyramid.jpg" alt="Self Portrait L2 Pyramid">
-        </div>
-        <div class="image-gallery">
-            <h4>Three Generations</h4>
-            <img src="images/three_generations_L2_Pyramid.jpg" alt="Three Generations L2 Pyramid">
-        </div>
-        <div class="image-gallery">
-            <h4>Train</h4>
-            <img src="images/train_L2_Pyramid.jpg" alt="Train L2 Pyramid">
-        </div>
+    </div>
+</div>
 
-        <h3>JPG Images (Non-Pyramid)</h3>
-        <div class="image-gallery">
-            <h4>Cathedral</h4>
-            <img src="images/cathedral_L2_NoPyramid.jpg" alt="Cathedral L2 NoPyramid">
-        </div>
-        <div class="image-gallery">
-            <h4>Monastery</h4>
-            <img src="images/monastery_L2_NoPyramid.jpg" alt="Monastery L2 NoPyramid">
-        </div>
-        <div class="image-gallery">
-            <h4>Tobolsk</h4>
-            <img src="images/tobolsk_L2_NoPyramid.jpg" alt="Tobolsk L2 NoPyramid">
-        </div>
-    </section>
-
-    <section id="challenges">
-        <h2>Challenges & Solutions</h2>
-        <p>Aligning high-resolution TIF images was computationally intensive, but the pyramid approach significantly reduced the time while maintaining accuracy. For JPG images, the single-scale method was sufficient.</p>
-    </section>
+<h3>TIF Images (Pyramid)</h3>
+<div class="image-gallery">
+    <h4>Church</h4>
+    <img src="images/church_NCC_Pyramid.jpg" alt="Church L2 Pyramid">
+    <p>g_shift: (0, -5), r_shift: (52, -6)</p>
+</div>
+<div class="image-gallery">
+    <h4>Emir</h4>
+    <img src="images/emir_NCC_Pyramid.jpg" alt="Emir L2 Pyramid">
+    <p>g_shift: (-3, 7), r_shift: (108, -1043)</p>
+</div>
+<div class="image-gallery">
+    <h4>Harvesters</h4>
+    <img src="images/harvesters_NCC_Pyramid.jpg" alt="Harvesters L2 Pyramid">
+    <p>g_shift: (118, -3), r_shift: (120, 7)</p>
+</div>
+<div class="image-gallery">
+    <h4>Icon</h4>
+    <img src="images/icon_NCC_Pyramid.jpg" alt="Icon L2 Pyramid">
+    <p>g_shift: (42, 16), r_shift: (89, 22)</p>
+</div>
+<div class="image-gallery">
+    <h4>Lady</h4>
+    <img src="images/lady_NCC_Pyramid.jpg" alt="Lady L2 Pyramid">
+    <p>g_shift: (57, -6), r_shift: (123, -17)</p>
+</div>
+<div class="image-gallery">
+    <h4>Melons</h4>
+    <img src="images/melons_NCC_Pyramid.jpg" alt="Melons L2 Pyramid">
+    <p>g_shift: (83, 4), r_shift: (176, 7)</p>
+</div>
+<div class="image-gallery">
+    <h4>Onion Church</h4>
+    <img src="images/onion_church_NCC_Pyramid.jpg" alt="Onion Church L2 Pyramid">
+    <p>g_shift: (52, 22), r_shift: (108, 35)</p>
+</div>
+<div class="image-gallery">
+    <h4>Sculpture</h4>
+    <img src="images/sculpture_NCC_Pyramid.jpg" alt="Sculpture L2 Pyramid">
+    <p>g_shift: (33, -11), r_shift: (140, -26)</p>
+</div>
+<div class="image-gallery">
+    <h4>Self Portrait</h4>
+    <img src="images/self_portrait_NCC_Pyramid.jpg" alt="Self Portrait L2 Pyramid">
+    <p>g_shift: (50, -2), r_shift: (130, -5)</p>
+</div>
+<div class="image-gallery">
+    <h4>Three Generations</h4>
+    <img src="images/three_generations_NCC_Pyramid.jpg" alt="Three Generations L2 Pyramid">
+    <p>g_shift: (52, 5), r_shift: (108, 7)</p>
+</div>
+<div class="image-gallery">
+    <h4>Train</h4>
+    <img src="images/train_NCC_Pyramid.jpg" alt="Train L2 Pyramid">
+    <p>g_shift: (111, -7), r_shift: (107, 1)</p>
+</div>
 
     <section id="extra">
-        <h2>Bells & Whistles</h2>
-        <p>I implemented additional features such as automatic cropping and contrast adjustment to improve the final image quality.</p>
-    </section>
+    <h2>Bells & Whistles</h2>
+    <p>I implemented additional features such as automatic cropping and contrast adjustment to improve the final image quality.</p>
+    
+    <p>It was observed that simple alignment based on RGB similarity performs reasonably well for most landscape images but produces poor results when applied to some images containing people. Therefore, we attempted to use gradients or edges by introducing the Sobel filter, which significantly improved the alignment results. This improvement is due to the fact that images containing people often feature complex details and color variations. Direct alignment using the original images without edge detection is prone to noise and detail interference, leading to inaccuracies. The Sobel filter calculates the gradients in the horizontal and vertical directions, emphasizing the edge information in the images, thus making some alignment process more precise.</p>
 
-    <footer>
-        <p>Project by [Your Name]</p>
-    </footer>
+<h3>Comparison: Original vs Sobel Filter</h3>
+
+<div class="image-comparison">
+    <div class="image-gallery">
+        <h4>Emir (NCC Pyramid)</h4>
+        <div class="image-row">
+            <div class="image-col">
+                <h5>Original</h5>
+                <img class="comparison-image" src="images/emir_NCC_Pyramid.jpg" alt="Emir Original NCC Pyramid">
+                <p>g_shift: (-3, 7), r_shift: (108, -1043)</p>
+            </div>
+            <div class="image-col">
+                <h5>Sobel Filter</h5>
+                <img class="comparison-image" src="images/emir_NCC_Pyramid_with_sobel.jpg" alt="Emir Sobel NCC Pyramid">
+                <p>g_shift: (-3, 7), r_shift: (108, -1043)</p>
+            </div>
+        </div>
+    </div>
+
+
+
+<section id="automatic cropping and automatic contrast adjustment">
+    <h2>Automatic cropping and automatic contrast adjustment</h2>
+    <p>To enhance the visual quality of the final images, I also added automatic cropping and automatic contrast adjustment. This ensures a better overall visual effect, making the aligned images more appealing and precise.</p>
+</section>
+
+    <div class="image-gallery">
+        <h4>Monastery (NCC NoPyramid)</h4>
+        <div class="image-row">
+            <div class="image-col">
+                <h5>Original</h5>
+                <img class="comparison-image" src="images/monastery_NCC_NoPyramid.jpg" alt="Monastery NCC NoPyramid">
+                <p>g_shift: (-6, 0), r_shift: (9, 1)</p>
+            </div>
+            <div class="image-col">
+                <h5>Sobel Filter</h5>
+                <img class="comparison-image" src="images/monastery_NCC_NoPyramid_with_sobel.jpg" alt="Monastery Sobel NCC NoPyramid">
+                <p>g_shift: (-3, 0), r_shift: (3, 1)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Project by Wu Zhenxuan</p>
+</footer>
+
 </body>
 </html>

@@ -1,42 +1,135 @@
+/* 全局字体与页面布局 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    padding: 20px;
+    line-height: 1.6;
 }
 
+/* 页眉样式 */
 header {
-    background-color: #333;
+    background-color: #4CAF50;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+h3 {
+    font-size: 1.75em;
+    margin-top: 30px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+h5 {
+    font-size: 1.2em;
     color: #333;
 }
 
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
+/* 项目概述 */
+#overview p, #approach p, #challenges p, #extra p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
 }
 
-.image-gallery {
+/* 图片容器样式 */
+.image-comparison, .image-gallery {
+    margin-bottom: 40px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 图片行样式 */
+.image-row {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 20px;
 }
 
-.image-gallery img {
-    width: 45%;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+/* 单个图片列样式 */
+.image-col {
+    flex: 1;
+    text-align: center;
 }
 
-footer {
-    text-align: center;
+.image-col img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 图片悬停效果 */
+.image-col img:hover {
+    transform: scale(1.05);
+}
+
+/* 位移信息样式 */
+.image-col p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    background-color: #f9f9f9;
     padding: 10px;
-    background-color: #333;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 非对比图片：缩小5倍左右 */
+.image-gallery img:not(.comparison-image) {
+    width: 20%; /* 图片缩小为原来的20% (约5倍缩小) */
+    height: auto;
+}
+
+/* 挑战与解决方案的样式 */
+#challenges {
+    margin-top: 40px;
+}
+
+#challenges h2, #extra h2 {
+    font-size: 1.75em;
+    color: #333;
+}
+
+#challenges p {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+/* 页脚样式 */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
     color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
